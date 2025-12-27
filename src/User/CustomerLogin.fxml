@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="loginPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="User.CustomerLoginController">
+   <children>
+      <VBox alignment="CENTER" layoutX="200.0" layoutY="120.0" prefHeight="360.0" prefWidth="400.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 30;">
+         <children>
+            <Label text="Customer Login" textFill="#8B4513">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Separator />
+            
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Email Address:" textFill="#333333">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailField" prefHeight="35.0" promptText="Enter your email address" style="-fx-background-radius: 5;" />
+               </children>
+            </VBox>
+            
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Password:" textFill="#333333">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passwordField" prefHeight="35.0" promptText="Enter your password" style="-fx-background-radius: 5;" />
+               </children>
+            </VBox>
+            
+            <Label fx:id="errorLabel" textFill="red" visible="false" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            
+            <HBox alignment="CENTER" spacing="20.0">
+               <children>
+                  <Button fx:id="loginBtn" onAction="#handleLogin" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #8B4513; -fx-text-fill: white; -fx-background-radius: 5;" text="Login">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backBtn" onAction="#handleBack" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #gray; -fx-text-fill: white; -fx-background-radius: 5;" text="Back">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            
+            <Label text="Don't have an account?" textFill="#666666">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="signupLinkBtn" onAction="#handleGoToSignup" style="-fx-background-color: transparent; -fx-text-fill: #8B4513; -fx-underline: true;" text="Sign up here">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

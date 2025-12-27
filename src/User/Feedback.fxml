@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="feedbackPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="User.FeedbackController">
+   <children>
+      <VBox alignment="CENTER" layoutX="150.0" layoutY="80.0" prefHeight="440.0" prefWidth="500.0" spacing="25.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 40;">
+         <children>
+            <Label text="Thank You for Your Order!" textFill="#8B4513">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            
+            <Separator />
+            
+            <Label text="⭐" style="-fx-font-size: 60px;" textFill="#FFD700" />
+            
+            <Label text="Please rate your experience:" textFill="#333333">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            
+            <HBox alignment="CENTER" spacing="15.0">
+               <children>
+                  <Button fx:id="star1" onAction="#handleStar1" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #f0f0f0; -fx-border-color: #ccc; -fx-border-radius: 25; -fx-background-radius: 25;" text="★">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="star2" onAction="#handleStar2" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #f0f0f0; -fx-border-color: #ccc; -fx-border-radius: 25; -fx-background-radius: 25;" text="★">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="star3" onAction="#handleStar3" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #f0f0f0; -fx-border-color: #ccc; -fx-border-radius: 25; -fx-background-radius: 25;" text="★">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="star4" onAction="#handleStar4" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #f0f0f0; -fx-border-color: #ccc; -fx-border-radius: 25; -fx-background-radius: 25;" text="★">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="star5" onAction="#handleStar5" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #f0f0f0; -fx-border-color: #ccc; -fx-border-radius: 25; -fx-background-radius: 25;" text="★">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            
+            <Label fx:id="ratingLabel" text="Rating: 0/5" textFill="#666666">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Additional Comments (Optional):" textFill="#333333">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="commentArea" prefHeight="80.0" prefWidth="400.0" promptText="Tell us about your experience..." style="-fx-background-radius: 5;" wrapText="true" />
+               </children>
+            </VBox>
+            
+            <HBox alignment="CENTER" spacing="20.0">
+               <children>
+                  <Button fx:id="submitBtn" onAction="#handleSubmitFeedback" prefHeight="45.0" prefWidth="130.0" style="-fx-background-color: #8B4513; -fx-text-fill: white; -fx-background-radius: 5;" text="Submit Feedback">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="skipBtn" onAction="#handleSkipFeedback" prefHeight="45.0" prefWidth="130.0" style="-fx-background-color: #gray; -fx-text-fill: white; -fx-background-radius: 5;" text="Skip">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
