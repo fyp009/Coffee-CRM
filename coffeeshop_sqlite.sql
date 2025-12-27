@@ -1,7 +1,4 @@
--- SQLite version of the CoffeeShop database
--- Converted from MySQL schema for simplified setup
 
--- Table structure for table admin_account
 CREATE TABLE IF NOT EXISTS admin_account (
   admin_username TEXT PRIMARY KEY NOT NULL,
   admin_password TEXT NOT NULL DEFAULT 'password',
@@ -9,7 +6,6 @@ CREATE TABLE IF NOT EXISTS admin_account (
   status TEXT NOT NULL DEFAULT 'Offline'
 );
 
--- Dumping data for table admin_account
 INSERT INTO admin_account (admin_username, admin_password, role, status) VALUES
 ('Admin', '123', 'Admin', 'Offline'),
 ('Khun', 'password', 'Cashier', 'Offline'),
@@ -19,7 +15,7 @@ INSERT INTO admin_account (admin_username, admin_password, role, status) VALUES
 ('test', 'password', 'Barista', 'Offline'),
 ('test1', 'password', 'Barista', 'Offline');
 
--- Table structure for table drink_list
+
 CREATE TABLE IF NOT EXISTS drink_list (
   drink_id INTEGER PRIMARY KEY AUTOINCREMENT,
   drink_name TEXT NOT NULL,
@@ -29,7 +25,7 @@ CREATE TABLE IF NOT EXISTS drink_list (
   drink_img TEXT NOT NULL DEFAULT 'resources/img/temp_icon.png'
 );
 
--- Dumping data for table drink_list
+
 INSERT INTO drink_list (drink_id, drink_name, drink_hot_price, drink_iced_price, drink_frappee_price, drink_img) VALUES
 (1, 'Latte', 1.25, 2.80, 3.15, 'resources/img/Latte.png'),
 (2, 'Cappucino', 1.25, 2.50, 2.75, 'resources/img/Cappuccino.png'),
@@ -89,7 +85,7 @@ INSERT INTO history (customer_id, drink_name, drink_type, drink_price, drink_qua
 (2, 'Cappucino', 'Hot', 1.25, 1, 1.25, '2022-04-02', '09:37:29', 'Completed', 'Sothirich', 'Sothirich'),
 (2, 'Mocha', 'Hot', 1.25, 1, 1.25, '2022-04-02', '09:37:29', 'Completed', 'Sothirich', 'Sothirich');
 
--- Table structure for table temp_admin
+
 CREATE TABLE IF NOT EXISTS temp_admin (
   Nº INTEGER PRIMARY KEY AUTOINCREMENT,
   admin_username TEXT NOT NULL,
@@ -108,7 +104,7 @@ INSERT INTO temp_admin (admin_username, admin_password, role, status) VALUES
 ('test', 'password', 'Barista', 'Offline'),
 ('test1', 'password', 'Barista', 'Offline');
 
--- Table structure for table temp_customer
+
 CREATE TABLE IF NOT EXISTS temp_customer (
   Nº INTEGER PRIMARY KEY AUTOINCREMENT,
   customer_id INTEGER NOT NULL,
@@ -119,12 +115,11 @@ CREATE TABLE IF NOT EXISTS temp_customer (
   total_price REAL NOT NULL
 );
 
--- Sample data for table temp_customer
+
 INSERT INTO temp_customer (customer_id, drink_name, drink_type, drink_price, drink_quantity, total_price) VALUES
 (24, 'Caramel Macchiato', 'Hot', 1.25, 2, 2.50),
 (24, 'Condensed Milk', 'Hot', 1.00, 1, 1.00);
 
--- Table structure for table temp_drinklist
 CREATE TABLE IF NOT EXISTS temp_drinklist (
   drink_id INTEGER PRIMARY KEY AUTOINCREMENT,
   drink_name TEXT NOT NULL,
@@ -142,4 +137,5 @@ INSERT INTO temp_drinklist (drink_id, drink_name, drink_hot_price, drink_iced_pr
 (4, 'Caramel Macchiato', 1.25, 2.80, 3.75, 'resources/img/Macchiato.png'),
 (5, 'Condensed Milk', 1.00, 2.50, 2.80, 'resources/img/Milk.png'),
 (6, 'Mocha', 1.25, 2.15, 2.65, 'resources/img/Mocha.png'),
+
 (7, 'Test1', 1.00, 2.00, 3.00, 'resources/img/temp_icon.png');
